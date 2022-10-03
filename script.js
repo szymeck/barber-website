@@ -32,12 +32,15 @@ videos.forEach((video) =>{
     ScrollTrigger.create({
         trigger: video,
         start:'top center',
-        end:'center center',
+        end:'bottom center',
         markers:true,
         onEnter:() =>{
             gsap.to(video,{opacity:1});
             video.play();
         },
+        onEnterBack:()=>video.play(),
+        onLeave:()=>video.pause(),
+        onLeaveBack:()=>video.pause(),
 
     })
 });
