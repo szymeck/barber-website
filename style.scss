@@ -6,7 +6,7 @@
 
 html,body{
     
-    font-family: 'Lobster', cursive;
+    font-family: 'Glegoo', serif;
     overflow-x: hidden;
    position: relative;
     height: 100%;
@@ -30,13 +30,16 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1b1b1b7c;
+    
     padding: 0.5rem 0.5rem;
     border-radius: 0.5rem;
 
     svg{
         cursor: pointer;
         z-index: 10;
+        line{
+        box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.927);}
+
     }
 }
 
@@ -78,9 +81,10 @@ h3{
 .logo{
     display: flex;
     h1{
-        margin-left: 2rem;
-        
+        margin-left: 1.5rem;
+        text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.727);
         font-size: 1.5rem;
+        
     }
     .img{
         width: 2rem;
@@ -91,13 +95,17 @@ h3{
     
     min-height: 100vh;
     color: white;
+    img{
+        object-fit: cover;
+        filter:saturate(0.3);
+    }
 }
 
 .selling-point{
     margin-top: 25vh;
-    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.527);
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.727);
     text-align: center;
-    background-color:#1b1b1b7c; 
+    
     border-radius: 0.5rem;
     max-width: 50rem;
     
@@ -105,10 +113,12 @@ h3{
     margin-right: auto;
     h2{
         padding: 0.5rem 0.5rem;
+        text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.727);
     }
     h3{
         font-family:'Open Sans',sans-serif;
         padding: 0.5rem 0.5rem;
+        text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.727);
     }
 }
 
@@ -122,9 +132,9 @@ h3{
     font-size: 1rem;
     border: none;
     border-radius: 0.5rem;
-    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.507);
-    margin: 0.5rem;
-    font-family: 'lobster';
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.707);
+    margin: 0.1rem;
+    font-family: 'Glegoo', serif;
 
 }
 .btn-main{
@@ -150,35 +160,46 @@ h3{
 .uslugi{
     color: var(--secondary-color);
     text-align: center;
+    h3{
+        font-family:'Open Sans',sans-serif;
+    }
+    
+    
+ 
     
 }
 
 .videos{
+   
     video{
         width: 100%;
         border-radius: 1rem;
         margin-top: 1rem;
-        height: 30rem;
+        filter:saturate(0.4);
         object-fit: cover;
     }
 
     .haircut, .beard, .modeling{
         position: relative;
+        
+        
     }
 
     h3{
         position: absolute;
         color: var(--main-color);
-        text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.466);
+        text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.727);
         bottom: 10%;
         left:50%;
         transform: translate(-50%,-10%);
         font-size: 2rem;
+        z-index: 100;
     }
 }
 
 .about {
-    color: var(--secondary-color);
+    color: white;
+    background-color: var(--secondary-color);
     p{
         line-height: 150%;
         font-size: 1.2rem;
@@ -191,4 +212,9 @@ h3{
     h2{
         text-align: center;
     }
+}
+
+.contact{
+    background-color: var(--main-color);
+    height: 80vh;
 }
