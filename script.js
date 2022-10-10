@@ -44,3 +44,9 @@ videos.forEach((video) =>{
 
     })
 });
+
+
+window.addEventListener('load',() =>{
+    const preload = document.querySelector('.loader-wrapper');
+    preload.classList.add('load-wrapper-finish');
+});
