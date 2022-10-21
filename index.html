@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,33 +14,37 @@
     <title>Tomasz Komar Salon Fryzjerski</title>
 </head>
 <body>
-    <div class="loader-wrapper">
-        <span class="loader"><span class="loader-inner"></span></span>
-    </div>
+    
     <section class="front-page">
-        <img class="hero" src="/assets/barber-back.jpg" alt="background-barber" >
+        <div class="loader-wrapper">
+        <span class="loader"></span>
+    </div>
+        <img class="hero" src="/assets/barber-back10.jpg" alt="background-barber" >
         <nav>
             <div class="logo">
-                <img src="./" alt="logo" >
-                <h1>Tomek Komar</h1>
+                <img src="/assets/logo.svg"  alt="logo" >
+                
             </div>
             <div class="links">
-                <a href="#">O mnie</a>
-                <a href="#">Usługi</a>
-                <a href="#">Kontakt</a>
+                <button id="section1Btn">Usługi</button>
+                <button id="section2Btn">Cennik</button>
+                <button id="section3Btn">O mnie</button>
+                <button id="section4Btn">Kontakt</button>
+                
             </div>
             
             <svg 
-            width="44"
-            height="18"
-            vievBox="0 0 44 18"
+            width="50"
+            height="26"
+            vievBox="0 0 60 26"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            id="menu"
             >
             <line
             class="line"
             y1="1"
-            x2="44"
+            x2="50"
             y2="1"
             stroke="white"
             stroke-width="2"
@@ -46,7 +52,7 @@
           <line
             class="line"
             y1="9"
-            x2="44"
+            x2="50"
             y2="9"
             stroke="white"
             stroke-width="2"
@@ -54,7 +60,7 @@
           <line
             class="line"
             y1="17"
-            x2="44"
+            x2="50"
             y2="17"
             stroke="white"
             stroke-width="2"
@@ -73,7 +79,7 @@
             </div>
         </div>
     </section>
-    <section class="uslugi">
+    <section class="uslugi" id="section1">
 <div class="uslugi-descryption">
     <h2>Usługi fryzjerskie specjalnie dla Ciebie</h2>
     <h3>Zadbaj o siebie,swoje włosy i brodę </h3>
@@ -83,31 +89,37 @@
 <div class="videos">
     <div class="haircut">
     <h3>Strzyżenie</h3>
-    <video muted loop class="video" src="./assets/haircut2-video.mp4"></video>
+    <video muted loop playsinline autoplay class="video" src="/assets/haircut2-video2.mp4"></video>
     </div>
     <div class="modeling">
     <h3>Modelowanie</h3>
-    <video muted loop class="video" src="/assets/haircut-video.mp4"></video>
+    <video muted loop playsinline autoplay class="video" src="/assets/haircut-video2.mp4"></video>
     </div>
     <div class="beard">
     <h3>Pięlegnacja brody</h3>
-    <video muted loop class="video" src="/assets/beard-video.mp4"></video>
+    <video muted loop playsinline autoplay  class="video" src="/assets/beard-video3.mp4"></video>
     </div>
 </div>
     </section>
-    <section class="cennik">
-        <h2>Cennik</h2>
+    <section class="cennik" id="section2">
+        <div class="cennik-list">
+        <h2>cennik</h2>
         <div class="cennik-wrap">
-        
-        <div class="cennik-left">
-            <p>Strzyżenie męskie</p>
+            <div class="cennik-left">
+        <p>Strzyżenie</p>
+        <p>Strzyżenie i Golenie</p>
+            </div>
+            <div class="cennik-right">
+            <p>Od 70zł
+            </p>
+            <p>Od 100zł</p>
         </div>
-        <div class="cennik-right"></div>
-        <p>Od 70zł</p>
-    </div>
+            </div>
+        </div>
+        
     </section>
 
-    <section class="about">
+    <section class="about" id="section3">
 <div class="our-story">
     <h2>O mnie...</h2>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus cupiditate error quaerat veritatis quibusdam tenetur hic, sunt a vel nihil architecto omnis qui.</p>
@@ -116,11 +128,9 @@
 
     </section>
    
-<section class="contact">
+<section class="contact" id="section4">
 <div class="contact-text">
-    <img src="/assets/contact-back.jpg" alt="contact-img" srcset="">
-    <div class="contact-left">
-<h2>Kontakt</h2>
+    <h2>Kontakt</h2>
 <p>Ul. Młynarska 9, Siedlce</p>
 <p>Tel. 506 046 600</p>
 <hr/>
@@ -128,13 +138,13 @@
 <p>Pn-Pt: 9-17</p>
 <p>Sob: 9-14</p>
 </div>
-
+  
 
 </div>
 
 
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d611.8224124321946!2d22.28417673173827!3d52.165426999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471f5a4c026dca8b%3A0xed5c096136ee716c!2sM%C5%82ynarska%2C%2008-110%20Siedlce!5e0!3m2!1sen!2spl!4v1665391508769!5m2!1sen!2spl" width="400" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d611.8224124321946!2d22.28417673173827!3d52.165426999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471f5a4c026dca8b%3A0xed5c096136ee716c!2sM%C5%82ynarska%2C%2008-110%20Siedlce!5e0!3m2!1sen!2spl!4v1665391508769!5m2!1sen!2spl" width="400" height="600"  allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <hr/>
     
@@ -142,13 +152,9 @@
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js" integrity="sha512-gsEItzcNkWxfxHjr4BaEZAd9YuRWYjxnj7c/yukcZ0/nWehUb5TjJNyyv1ApCU2DFH/qgw+stFZHPOKnoQnIuQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"
-      integrity="sha512-YzMW3OzvgtVpIIPPpjnCy8wVTq5slHRrxnLH1oD5dkVjZf8+8DJYd+GYmmWXZNmroTqKXFFzFS3XZ/LBvaNgZg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/ScrollToPlugin.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="/script.js"></script>
    
 
