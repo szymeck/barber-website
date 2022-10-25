@@ -94,14 +94,18 @@ const pop = document.querySelector('.popup-image');
 document.querySelectorAll('.gallery-images img').forEach(image =>{
   image.onclick=()=>{
     pop.style.display='block';
+    body.style.overflow='hidden';
     document.querySelector('.popup-image img').src = image.getAttribute('src');
+    
+      
+    
   }
 });
 
 pop.onclick=() =>{
-  pop.style.display='none';
+  pop.style.display='none'
+  body.style.overflow='auto';
 }
-
 
 
 
