@@ -54,10 +54,10 @@ gsap.registerPlugin(ScrollToPlugin);
 document.querySelectorAll("nav .links button").forEach((btn, index) => {
     btn.addEventListener("click", () => {
       if(($(window).width() > 870)){
-        gsap.to(window, {duration: 1, scrollTo:{y:"#section" + (index + 1),offsetY:50}});
+        gsap.to(window, {duration: 1, scrollTo:{y:"#section" + (index + 1),offsetY:60}});
     }
       else{
-        gsap.to(document.body, {duration: 1, scrollTo:{y:"#section" + (index + 1),offsetY:50}});
+        gsap.to(document.body, {duration: 1, scrollTo:{y:"#section" + (index + 1),offsetY:65}});
     }
 });
 });
@@ -75,8 +75,6 @@ mainButton.addEventListener('click',()=>{
 })
 
 
-
-
 // scroll top after click logo desktop view
 const logo=document.querySelector('nav .logo button');
 logo.addEventListener('click',()=>{
@@ -88,7 +86,26 @@ logo.addEventListener('click',()=>{
   if(document.body.scrollTop>0)
     gsap.to(document.body,{duration: 1, scrollTo:{y:'#section1'}})
 });
-    
+
+
+// gallery popup
+const pop = document.querySelector('.popup-image');
+
+document.querySelectorAll('.gallery-images img').forEach(image =>{
+  image.onclick=()=>{
+    pop.style.display='block';
+    document.querySelector('.popup-image img').src = image.getAttribute('src');
+  }
+});
+
+pop.onclick=() =>{
+  pop.style.display='none';
+}
+
+
+
+
+        
 
   
 
