@@ -2,9 +2,11 @@ const burger = document.querySelector('nav svg');
 const body = document.querySelector('body');
 const menu =document.getElementById('menu');
 
+
+
 // burger menu
 document.onclick=function(clickevent){
-    if(clickevent.target.id !=='menu' && $(window).width() < 870 ) {
+    if(clickevent.target.id !=='menu' && $(window).width() < 768 ) {
         gsap.to(".links",{x:"100%"});
         gsap.to('.line',{stroke:'white'});
         gsap.set('body',{overflow:'auto'});
@@ -14,10 +16,10 @@ document.onclick=function(clickevent){
        
     }
 
-    else if(($(window).width() < 870)){
+    else if(($(window).width() < 768)){
         gsap.to('.links',{x:'0%'});
         gsap.to('.line',{stroke:'black'});
-        gsap.fromTo('.links button',{opacity:0,y:-20},{opacity:1,y:0,delay:0.15,stagger:0.25});
+        gsap.fromTo('.links button',{opacity:0,y:-20},{opacity:1,y:0,delay:0.2,stagger:0.15});
         gsap.set("body",{overflow:"hidden"});
         gsap.set('svg',{pointerEvents:'none'} );
         burger.classList.toggle('active');
@@ -48,12 +50,14 @@ window.addEventListener('load',() =>{
     preload.classList.add('load-wrapper-finish');
 });
 
+
+
 gsap.registerPlugin(ScrollToPlugin);
 
 // scroll after click link
 document.querySelectorAll("nav .links button").forEach((btn, index) => {
     btn.addEventListener("click", () => {
-      if(($(window).width() > 870)){
+      if(($(window).width() > 768)){
         gsap.to(window, {duration: 1, scrollTo:{y:"#section" + (index + 1),offsetY:60}});
     }
       else{
@@ -66,12 +70,11 @@ document.querySelectorAll("nav .links button").forEach((btn, index) => {
 const mainButton = document.querySelector('.btn-sec');
 
 mainButton.addEventListener('click',()=>{
-  if(($(window).width() > 870)){
+  // desktop view
     gsap.to(window, {duration: 0.8, scrollTo:{y:"#section2",offsetY:50}});
-}
-  else{
+// mobile view
     gsap.to(document.body, {duration: 0.8, scrollTo:{y:"#section2",offsetY:65}});
-}
+
 })
 
 
@@ -96,9 +99,6 @@ document.querySelectorAll('.gallery-images img').forEach(image =>{
     pop.style.display='block';
     body.style.overflow='hidden';
     document.querySelector('.popup-image img').src = image.getAttribute('src');
-    
-      
-    
   }
 });
 
