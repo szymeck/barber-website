@@ -34,7 +34,9 @@ window.addEventListener("scroll", ()=> {
 
 // sticky nav mobile view
 const onScroll = () => {
-    if (document.body.scrollTop>15) {
+    const scroll = document.body.scrollTop;
+  
+    if (scroll > 150) {
       nav.classList.add("scrolled");
     } else {
       nav.classList.remove("scrolled")
@@ -55,8 +57,12 @@ gsap.registerPlugin(ScrollToPlugin);
 // scroll after click link
 document.querySelectorAll("nav .links button").forEach((btn, index) => {
     btn.addEventListener("click", () => {
+      if($(window).width() > 767){
         gsap.to(window, {duration: 1, scrollTo:{y:"#section" + (index + 1),offsetY:60}});
+      }
+      else if($(window).width() < 768){
         gsap.to(document.body, {duration: 1, scrollTo:{y:"#section" + (index + 1),offsetY:65}});
+      }
     });
   });
 
@@ -65,10 +71,12 @@ document.querySelectorAll("nav .links button").forEach((btn, index) => {
 const mainButton = document.querySelector('.btn-sec');
 
 mainButton.addEventListener('click',()=>{
-  
-document.getElementById('section2').scrollIntoView({ behavior: 'smooth'});
+  // desktop view
+    gsap.to(window, {duration: 0.8, scrollTo:{y:"#section2",offsetY:50}});
+// mobile view
+    gsap.to(document.body, {duration: 0.8, scrollTo:{y:"#section2",offsetY:65}});
 
-});
+})
 
 
 // scroll top after click logo desktop view
