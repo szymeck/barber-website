@@ -34,13 +34,16 @@ window.addEventListener("scroll", ()=> {
 
 // sticky nav mobile view
 const onScroll = () => {
-    if (document.body.scrollTop>150) {
+    const scrollB = body.scrollTop;
+  
+    if (scrollB > 150) {
       nav.classList.add("scrolled");
     } else {
       nav.classList.remove("scrolled")
     }
   }
-  document.body.addEventListener('scroll', onScroll);
+  
+  body.addEventListener('scroll', onScroll);
 
 // startup loader   
 window.addEventListener('load',() =>{
