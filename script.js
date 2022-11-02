@@ -34,7 +34,7 @@ window.addEventListener("scroll", ()=> {
 
 // sticky nav mobile view
 const onScroll = () => {
-    const scrollB = document.body.scrollTop;
+    const scrollB = body.scrollTop;
   
     if (scrollB > 150) {
       nav.classList.add("scrolled");
