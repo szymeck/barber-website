@@ -357,6 +357,7 @@ h3 {
   transform: scale(1);
   transition: 0.2s ease-in-out;
   overflow: hidden;
+  border-radius: 1rem;
   cursor: pointer;
 }
 .galeria .gallery-images .gallery-img img:hover {

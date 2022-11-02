@@ -390,6 +390,7 @@ h3{
                 -webkit-transition: .2s ease-in-out;
                 transition: .2s ease-in-out;
                 overflow: hidden;
+                border-radius: 1rem;
                 cursor: pointer;
                 &:hover {
                     -webkit-transform: scale(1.03);
