@@ -57,14 +57,11 @@ gsap.registerPlugin(ScrollToPlugin);
 // scroll after click link
 document.querySelectorAll("nav .links button").forEach((btn, index) => {
     btn.addEventListener("click", () => {
-      if(($(window).width() > 768)){
         gsap.to(window, {duration: 1, scrollTo:{y:"#section" + (index + 1),offsetY:60}});
-    }
-      else{
         gsap.to(document.body, {duration: 1, scrollTo:{y:"#section" + (index + 1),offsetY:65}});
-    }
-});
-});
+    });
+  });
+
 
 // main buttons click
 const mainButton = document.querySelector('.btn-sec');

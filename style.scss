@@ -29,6 +29,8 @@ section{
     
 }
 
+// navbar
+
 nav{
     border-radius: 0;
     position: fixed;
@@ -132,6 +134,7 @@ h3{
     } 
 }
 
+// logo
 
 .logo{
     display: flex;
@@ -152,6 +155,8 @@ h3{
         cursor: pointer;
     }
 }
+
+// frontpage
 
 .front-page{ 
     min-height: 100vh;
@@ -232,6 +237,8 @@ h3{
         text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.727);
     }
 }
+
+// usługi
 
 .uslugi{
     .uslugi-descryption{
@@ -319,6 +326,7 @@ h3{
 }
 }
 
+// o mnie
 
 .omnie {
     color: white;
@@ -354,6 +362,8 @@ h3{
         }
     }
 }
+
+// galeria
 
 .galeria{
     background-color: var(--secondary-color);
@@ -411,7 +421,7 @@ h3{
     background-color: rgba(0, 0, 0, 0.927);
     height: 100%;
     width: 100%;
-    z-index: 20;
+    z-index: 15;
     display: none;
     img{
         position: absolute;
@@ -426,12 +436,14 @@ h3{
 }
 }
 
+// kontakt
+
 .contact{
     
     .contact-content{
         display: grid;
         grid-template-columns: 1fr ;
-        height: 80%;
+        height: 100%;
         box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.707);
         border-radius: 1.3rem;
         .contact-left{
@@ -442,7 +454,7 @@ h3{
             border-top-right-radius: 1rem;
             border-top-left-radius: 1rem;
             color: white;
-            background-color: var(--secondary-color);
+            background-image: linear-gradient(to  bottom ,var(--secondary-color),rgb(0, 0, 0));
             h2{
                 text-align: center;
                 padding-left:1rem ;
@@ -453,13 +465,16 @@ h3{
                 color: var(--main-color);
                 box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.707);
             }
-            img{
-                width: 25%;
-                padding:1rem 0;
-                filter: invert(68%) sepia(73%) saturate(988%) hue-rotate(338deg) brightness(95%) contrast(86%);
+            i{
+                color: var(--main-color);
+                font-size: 4rem;
+                
             }
             p:last-child{
                 margin-bottom: 1rem;
+            }
+            i:last-child{
+                margin-top: 1rem;
             }
         }
         .contact-right{
@@ -467,21 +482,20 @@ h3{
             display: flex;
             border-bottom-right-radius: 1rem;
             border-bottom-left-radius: 1rem;
-            height: 50vh;
             iframe{
-                height: 100%;
+                height: 50vh;
                 width: 100%;
                 padding:1rem;
                 justify-content: center;
-                align-items: center;
+                align-items: center;                
             }
         }
     }
     
 }
 .footer{
-    background-color: #9c1616;
-    height: 1rem;
+    background-color: #000000;
+    height: 1.1rem;
     h2{
         padding: 0;
         font-size: 0.7em;
@@ -490,8 +504,7 @@ h3{
     }
 }
 
-
-
+// loading
 
 .loader-wrapper{
     width: 100%;
@@ -502,13 +515,14 @@ h3{
     background-color: #1b1b1b;
     opacity: 1;
     z-index: 13;
-    transition: opacity 1.5s ease;
+    transition: opacity 1.5s ease;  
     
 }
 
 .load-wrapper-finish {
     opacity: 0;
     pointer-events: none;
+    
 }
 
 .loader {
@@ -553,8 +567,6 @@ h3{
     -webkit-animation: spin 1.5s linear infinite; 
       animation: spin 1.5s linear infinite;
 }
-
-
 
 @-webkit-keyframes spin {
     0%   {
@@ -805,13 +817,15 @@ h3{
             }
         }
         .contact{
-            height: 100vh;
+            
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 80vh;
             .contact-content{               
                 grid-template-columns: 1fr 1.5fr;
-                height: 90%;              
+                height: 100%;  
+                width: 100%;            
                 .contact-left{                    
                     border-top-left-radius: 1rem;
                     border-bottom-left-radius: 1rem;
@@ -821,7 +835,10 @@ h3{
                     border-top-right-radius: 1rem;
                     border-bottom-right-radius: 1rem;
                     border-bottom-left-radius: 0;
-                    height: auto;                    
+                    height: auto;  
+                    iframe{
+                        height: auto;
+                    }                  
                 }
             }            
         }
